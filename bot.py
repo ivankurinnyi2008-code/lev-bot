@@ -9,10 +9,8 @@ from groq import Groq
 import os
 
 TELEGRAM_TOKEN = os.getenv('TOKEN')
-GROQ_API_KEY = os.getenv('GROQ_API_KEY')
-CRYPTO_PAY_TOKEN = os.getenv('CRYPTO_PAY_TOKEN')
 
-bot = telebot.TeleBot(TELEGRAM_TOKEN)
+bot = telebot.TeleBot(TOKEN)
 groq_client = Groq(api_key=GROQ_API_KEY)
 
 conn = sqlite3.connect('bot.db', check_same_thread=False)
@@ -267,5 +265,6 @@ def handle_message(message):
 if __name__ == '__main__':
     print("Bot started!")
     bot.infinity_polling()
+
 
 
