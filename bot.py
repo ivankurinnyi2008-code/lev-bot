@@ -8,7 +8,7 @@ import time
 from groq import Groq
 import os
 
-TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
+TELEGRAM_TOKEN = os.getenv('BOT_TOKEN')
 GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 CRYPTO_PAY_TOKEN = os.getenv('CRYPTO_PAY_TOKEN')
 
@@ -267,3 +267,4 @@ def handle_message(message):
 if __name__ == '__main__':
     print("Bot started!")
     bot.infinity_polling()
+
